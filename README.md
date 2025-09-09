@@ -17,5 +17,4 @@ Read path queries a BitcoinSchema-aware indexer to pull posts tagged `app=treech
 - Uses a public indexer to discover and parse posts (BMAP) for display.
 
 ## License
-Open BSV License. See: https://bitcoinassociation.net/open-bsv-license/
-
+Open BSV License. Copyright P2PPSR.

@@ -96,9 +96,13 @@ export async function publishPost(
   opts?: Parameters<typeof buildPostOpReturnHex>[2]
 ) {
   const opReturnHex = await buildPostOpReturnHex(wallet, content, opts);
-  const res = await (wallet as any).createAction({
+  const res = await wallet.createAction({
     description: 'Post to BitcoinSchema',
-    outputs: [{ satoshis: 0, script: opReturnHex }]
+    outputs: [{
+      satoshis: 1,
+      LockingScript: opReturnHex,
+      outputDescription: 'Output'
+    }]
   });
   return res;
 }
